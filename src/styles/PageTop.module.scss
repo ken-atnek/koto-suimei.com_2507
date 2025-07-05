@@ -1,0 +1,293 @@
+/* =================================
+ * 	徳永琴教室 TOPページ
+ * ------------------------------ */
+@use "variable" as *;
+@use "svg" as *;
+/* stylelint-disable no-descending-specificity */
+/* stylelint-disable keyframes-name-pattern */
+/* stylelint-disable custom-property-pattern */
+// このファイル全体のルールを無効にする
+
+/* =================================
+ * HERO
+ * ------------------------------ */
+.containerHero {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10vw;
+    font-size: inherit;
+    @include sp {
+        padding: 0 4vw 12vw;
+    }
+    article {
+        width: 100%;
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+        p {
+            position: absolute;
+            top: 0.5em;
+            left: 1em;
+            font-size: 5vw;
+            font-weight: 500;
+            letter-spacing: 0.04em;
+            line-height: 1.4em;
+        }
+    }
+}
+
+/* =================================
+ * HERO TEXT
+ * ------------------------------ */
+.containerHeroText {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5em 2em 0;
+    font-size: inherit;
+    article {
+        display: grid;
+        width: fit-content;
+        grid-template-columns: repeat(2, auto);
+        .box01,
+        .box02 {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            font-size: inherit;
+            padding: 5em;
+        }
+        .box01 {
+            padding-right: 3em;
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                background-color: #909090;
+                right: 0;
+            }
+            &::before {
+                bottom: 0;
+                width: 1px;
+                height: 100%;
+            }
+            &::after {
+                top: 0;
+                width: 9px;
+                aspect-ratio: 1;
+                border-radius: 50%;
+                translate: 4px;
+            }
+            h3 {
+                font-size: FZ(35);
+                max-width: 12em;
+                text-align: center;
+                line-height: 1.6em;
+            }
+        }
+        .box02 {
+            padding-left: 3em;
+            gap: 1em 0;
+            h3 {
+                font-size: FZ(35);
+                max-width: 12em;
+            }
+            p {
+                font-size: FZ(17);
+                max-width: 27em;
+                letter-spacing: 0.01em;
+                line-height: 1.8em;
+            }
+        }
+    }
+}
+
+/* =================================
+ * 講座内容
+ * ------------------------------ */
+.containerLessonContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5em 2em;
+    background-color: $base-white;
+    gap: 3em 0;
+    .listLesson {
+        position: relative;
+        font-size: inherit;
+        color: $base-black;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3em;
+        max-width: $articleMaxWidth;
+        li {
+            position: relative;
+            font-size: inherit;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: rgb(0 0 0 / 3%);
+            padding: 3em 2em;
+            gap: 1.6em 0;
+            h3 {
+                font-size: FZ(28);
+            }
+            p {
+                font-size: FZ(17);
+                letter-spacing: 0.02em;
+                line-height: 1.8em;
+            }
+        }
+    }
+}
+
+/* =================================
+ * ペットの同伴について
+ * ------------------------------ */
+.containerPet {
+    background-color: $base-white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5em 0;
+    padding: 5em 2em;
+    color: $base-black;
+    .blockImage {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0 2em;
+        max-width: $articleMaxWidth;
+        figure {
+            position: relative;
+            font-size: inherit;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            img {
+                aspect-ratio: 1.33;
+                object-fit: cover;
+            }
+            figcaption {
+                font-size: FZ(16);
+                font-weight: 500;
+                margin-top: 0.2em;
+            }
+        }
+    }
+    .blockText {
+        display: flex;
+        flex-direction: column;
+        max-width: $articleMaxWidth;
+        margin-top: 3em;
+        h3 {
+            font-size: FZ(17);
+            letter-spacing: 0.04em;
+            margin-bottom: 1.6em;
+        }
+        p {
+            font-size: FZ(17);
+            display: flex;
+            flex-direction: column;
+            letter-spacing: 0.04em;
+            line-height: 1.6em;
+            span {
+                text-decoration: underline 1px solid;
+                line-height: 1.8em;
+            }
+        }
+    }
+}
+
+/* =================================
+ * 徳永恵津子について
+ * ------------------------------ */
+.containerProfile {
+    background-color: $base-white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5em 0;
+    padding: 5em 2em;
+    color: $base-black;
+    article {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        grid-template-rows: auto 1fr;
+        width: fit-content;
+        gap: 3em 5em;
+        max-width: $articleMaxWidth;
+        .itemImage {
+            grid-row: span 2;
+            max-width: 38rem;
+            img {
+                width: 100%;
+            }
+        }
+        h3 {
+            font-size: FZ(28);
+            letter-spacing: 0.04em;
+            line-height: 1.6em;
+        }
+        .wrapDetails {
+            font-size: inherit;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5em 0;
+            span {
+                font-size: FZ(19);
+                letter-spacing: 0.04em;
+            }
+        }
+    }
+}
+
+/* =================================
+ * 教室について
+ * ------------------------------ */
+.containerCourseInfo {
+    background-color: $base-white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3em 0;
+    padding: 5em 2em;
+    color: $base-black;
+    .itemImage {
+        max-width: 77rem;
+        img {
+            width: 100%;
+        }
+    }
+    article {
+        max-width: $articleMaxWidth;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 0 8em;
+        dl {
+            font-size: inherit;
+            grid-column: span 2;
+            display: grid;
+            grid-template-columns: subgrid;
+            border-bottom: solid 1px rgb(0 0 0 / 20%);
+            padding-block: 1em;
+            dt {
+                font-size: FZ(16);
+            }
+            dd {
+                font-size: FZ(16);
+                letter-spacing: 0.04em;
+                p {
+                    font-size: inherit;
+                    margin-top: 0.5em;
+                }
+            }
+            &:first-of-type {
+                border-top: solid 1px rgb(0 0 0 / 20%);
+            }
+        }
+    }
+}

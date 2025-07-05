@@ -1,0 +1,132 @@
+/* =================================
+ * 	銭太鼓講座 ページ
+ * ------------------------------ */
+@use "variable" as *;
+@use "svg" as *;
+/* stylelint-disable no-descending-specificity */
+/* stylelint-disable keyframes-name-pattern */
+/* stylelint-disable custom-property-pattern */
+// このファイル全体のルールを無効にする
+
+/* =================================
+ * 受講について
+ * ------------------------------ */
+.containerLessonAbout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8em 2em;
+    background-color: $base-white;
+    gap: 3em 0;
+    .listLesson {
+        position: relative;
+        font-size: inherit;
+        color: $base-black;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3em;
+        max-width: $articleMaxWidth;
+        li {
+            position: relative;
+            font-size: inherit;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: rgb(0 0 0 / 3%);
+            padding: 3em 2em;
+            gap: 1.6em 0;
+            h3 {
+                font-size: FZ(28);
+            }
+            p {
+                font-size: FZ(17);
+                letter-spacing: 0.02em;
+                line-height: 1.8em;
+                display: flex;
+                flex-direction: column;
+                align-self: stretch;
+                span {
+                    position: relative;
+                    padding-left: 0.8em;
+                    font-size: inherit;
+                    line-height: 1.6em;
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        top: 0.6em;
+                        left: 0;
+                        width: 6px;
+                        aspect-ratio: 1;
+                        background-color: $base-black;
+                        border-radius: 50%;
+                    }
+                    i {
+                        color: #f00;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* =================================
+ * 講座会場
+ * ------------------------------ */
+.containerVenue {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3em 2em;
+    background-color: $base-white;
+    color: $base-black;
+    .sidebarH2 {
+        font-size: FZ(28);
+        margin-top: 0.2em;
+    }
+    article {
+        display: flex;
+        flex-direction: column;
+        max-width: $articleMaxWidth;
+        margin-top: 5em;
+        gap: 0.5em 0;
+        h3 {
+            font-size: FZ(28);
+        }
+        address {
+            font-size: FZ(17);
+            margin-top: 1em;
+        }
+        div {
+            font-size: FZ(17);
+        }
+        h4 {
+            font-size: FZ(17);
+            margin-top: 1em;
+        }
+        .itemTel {
+            font-size: FZ(17);
+            letter-spacing: 0.04em;
+        }
+    }
+}
+
+/* =================================
+ * 講座風景
+
+ * ------------------------------ */
+.containerImage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3em 2em;
+    background-color: $base-white;
+    color: $base-black;
+    gap: 2em 0;
+    .itemImage {
+        position: relative;
+        max-width: 111rem;
+        font-size: inherit;
+        padding: 2em;
+        background-color: rgb(0 0 0 / 3%);
+    }
+}

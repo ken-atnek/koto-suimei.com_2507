@@ -1,8 +1,8 @@
 /* =======================================
- * HEADER
+ * 徳永琴教室 HEADER
  * URL: src/components/common/Header.tsx
- * Created: 2025-04-14
- * Last updated: 2025-04-23
+ * Created: 2025-07-05
+ * Last updated: 2025-07-05
  * ======================================= */
 'use client';
 import styles from '@/styles/components/common/Header.module.scss';
@@ -11,9 +11,6 @@ import Link from 'next/link';
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
 
   const closeMenu = () => {
     setIsOpen(false);
@@ -69,9 +66,6 @@ const Header = () => {
       className={`${styles.containerHeader} ${isScrolled ? styles.isActive : ''}`}
     >
       <article>
-        <Link href="/" className={styles.linkH1}>
-          <h1>kumanichigroup</h1>
-        </Link>
         <nav
           id="headerNav"
           className={`${isOpen ? styles['is-open'] : ''} ${
@@ -83,57 +77,45 @@ const Header = () => {
             className={`${styles.itemLink} ${styles.linkTop}`}
             onClick={closeMenu}
           >
-            TOP
+            トップ
           </Link>
           <Link
-            href="/#ContainerNews"
+            href="/lesson-suimei/"
             className={styles.itemLink}
             onClick={closeMenu}
           >
-            NEWS
+            四柱推命講座・鑑定
           </Link>
           <Link
-            href="/#ContainerAbout"
+            href="/lesson-koto/"
             className={styles.itemLink}
             onClick={closeMenu}
           >
-            about us
+            箏講座
           </Link>
           <Link
-            href="/#ContainerFlow"
+            href="/lesson-zenidaiko/"
             className={styles.itemLink}
             onClick={closeMenu}
           >
-            flow
+            銭太鼓体操講座
           </Link>
           <Link
-            href="/#ContainerFaq"
+            href="/lesson-taishokoto/"
             className={styles.itemLink}
             onClick={closeMenu}
           >
-            faq
+            大正琴講座
           </Link>
           <Link
-            href="/#ContainerContact"
+            href="/lesson-minikoto/"
             className={styles.itemLink}
             onClick={closeMenu}
           >
-            entry
+            ミニ箏講座
           </Link>
         </nav>
       </article>
-      <button
-        className={`${styles.hamburgerButton} ${
-          isOpen ? styles['is-open'] : ''
-        }`}
-        onClick={toggleMenu}
-        aria-expanded={isOpen}
-        aria-label="メニューを開閉"
-      >
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
     </header>
   );
 };

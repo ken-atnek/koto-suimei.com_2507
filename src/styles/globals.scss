@@ -3,7 +3,7 @@
 body {
     background-color: $base-black;
     color: $base-white;
-    @include SunSerif;
+    @include Serif;
     font-feature-settings: "palt";
     font-size: clamp(1.2rem, calc($base-vw * 1vw) + calc($slice * 1px), 1.6rem);
     margin: 0;
@@ -23,26 +23,6 @@ body {
     @include sp {
         font-size: 3.6vw;
     }
-    &::before,
-    &::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        aspect-ratio: 1366/893;
-    }
-    &::before {
-        background: url("../assets/images/header-bg.webp") no-repeat center
-            center / contain;
-    }
-    &::after {
-        background-image: linear-gradient(
-            to top,
-            rgba($base-black, 1),
-            rgba($base-black, 0) 30%
-        );
-    }
 }
 main {
     font-size: inherit;
@@ -59,4 +39,9 @@ footer {
     position: relative;
     font-size: inherit;
     z-index: 1;
+}
+h2 {
+    font-size: FZ(38);
+    font-weight: 500;
+    color: $base-black;
 }

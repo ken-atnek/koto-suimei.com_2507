@@ -1,5 +1,5 @@
 /* =======================================
- * 夏の陣 Layout
+ * 徳永琴教室 Layout
  * URL:src/app/layout.tsx
  * Created: 2025-07-03
  * Last updated: 2025-07-03
@@ -7,11 +7,12 @@
 
 import type { Metadata } from 'next';
 import '@/styles/globals.scss';
-import { Noto_Sans_JP } from 'next/font/google';
-
-const notoSans = Noto_Sans_JP({
+import { Zen_Old_Mincho } from 'next/font/google';
+import Header from '@/components/common/Header';
+import Footer from '@/components/common/Footer';
+const zenOldMincho = Zen_Old_Mincho({
   subsets: ['latin'],
-  weight: ['100', '300', '400', '500', '700', '900'],
+  weight: ['400', '500'],
   display: 'swap',
 });
 
@@ -21,8 +22,7 @@ const isRealProduction = process.env.NEXT_PUBLIC_IS_REAL_PROD === 'true';
 // 本番のみ metadataBase を設定
 const metadataBase = isRealProduction
   ? new URL(
-      process.env.NEXT_PUBLIC_METADATA_BASE ||
-        'https://contest2025-summer.hot-point.jp/'
+      process.env.NEXT_PUBLIC_METADATA_BASE || 'https://www.koto-suimei.com/'
     )
   : undefined;
 
@@ -37,14 +37,15 @@ export const metadata: Metadata = {
           url: '/ogp.webp',
           width: 1200,
           height: 630,
-          alt: 'ホットポイントグループ指名獲得サマーチャレンジ夏の陣のOGP画像',
+          alt: '徳永教室 | 熊本市で琴・四柱推命・銭太鼓を学ぶ（琴教室・太鼓教室・四柱推命教室）のOGP画像',
         },
       ],
     },
   }),
-  title: ' ホットポイントグループ指名獲得サマーチャレンジ夏の陣',
+  title:
+    ' 徳永教室 | 熊本市で琴・四柱推命・銭太鼓を学ぶ（琴教室・太鼓教室・四柱推命教室）',
   description: isRealProduction
-    ? 'ホットポイントグループ指名獲得サマーチャレンジ夏の陣'
+    ? '徳永教室 | 熊本市で琴・四柱推命・銭太鼓を学ぶ（琴教室・太鼓教室・四柱推命教室）'
     : undefined,
   robots: isRealProduction ? 'index, follow' : 'noindex, nofollow',
   icons: {
@@ -71,7 +72,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ja" className={`${notoSans.className} `}>
+    <html lang="ja" className={`${zenOldMincho.className} `}>
       <head>
         <meta
           name="robots"
@@ -86,7 +87,11 @@ export default function RootLayout({
           content="telephone=no, address=no, email=no"
         />
       </head>
-      <body>{children}</body>
+      <body>
+        <Header />
+        <main>{children}</main>
+        <Footer />
+      </body>
     </html>
   );
 }
