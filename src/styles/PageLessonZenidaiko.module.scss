@@ -9,67 +9,6 @@
 // このファイル全体のルールを無効にする
 
 /* =================================
- * 受講について
- * ------------------------------ */
-.containerLessonAbout {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 8em 2em;
-    background-color: $base-white;
-    gap: 3em 0;
-    .listLesson {
-        position: relative;
-        font-size: inherit;
-        color: $base-black;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 3em;
-        max-width: $articleMaxWidth;
-        li {
-            position: relative;
-            font-size: inherit;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background-color: rgb(0 0 0 / 3%);
-            padding: 3em 2em;
-            gap: 1.6em 0;
-            h3 {
-                font-size: FZ(28);
-            }
-            p {
-                font-size: FZ(17);
-                letter-spacing: 0.02em;
-                line-height: 1.8em;
-                display: flex;
-                flex-direction: column;
-                align-self: stretch;
-                span {
-                    position: relative;
-                    padding-left: 0.8em;
-                    font-size: inherit;
-                    line-height: 1.6em;
-                    &::before {
-                        content: "";
-                        position: absolute;
-                        top: 0.6em;
-                        left: 0;
-                        width: 6px;
-                        aspect-ratio: 1;
-                        background-color: $base-black;
-                        border-radius: 50%;
-                    }
-                    i {
-                        color: #f00;
-                    }
-                }
-            }
-        }
-    }
-}
-
-/* =================================
  * 講座会場
  * ------------------------------ */
 .containerVenue {
@@ -79,9 +18,16 @@
     padding: 3em 2em;
     background-color: $base-white;
     color: $base-black;
+    @include sp {
+        padding: 10vw 4vw 6vw;
+        gap: 2vw 0;
+    }
     .sidebarH2 {
         font-size: FZ(28);
         margin-top: 0.2em;
+        @include sp {
+            font-size: FZ(20);
+        }
     }
     article {
         display: flex;
@@ -89,8 +35,14 @@
         max-width: $articleMaxWidth;
         margin-top: 5em;
         gap: 0.5em 0;
+        @include sp {
+            margin-top: 4vw;
+        }
         h3 {
             font-size: FZ(28);
+            @include sp {
+                font-size: FZ(24);
+            }
         }
         address {
             font-size: FZ(17);
@@ -122,11 +74,18 @@
     background-color: $base-white;
     color: $base-black;
     gap: 2em 0;
+    @include sp {
+        padding: 10vw 0 6vw;
+        gap: 4vw 0;
+    }
     .itemImage {
         position: relative;
         max-width: 111rem;
         font-size: inherit;
         padding: 2em;
         background-color: rgb(0 0 0 / 3%);
+        @include sp {
+            padding: 4vw;
+        }
     }
 }

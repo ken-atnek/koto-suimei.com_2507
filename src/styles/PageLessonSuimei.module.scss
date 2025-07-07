@@ -9,66 +9,6 @@
 // このファイル全体のルールを無効にする
 
 /* =================================
- * 受講について
- * ------------------------------ */
-.containerLessonAbout {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 8em 2em;
-    background-color: $base-white;
-    gap: 3em 0;
-    .listLesson {
-        position: relative;
-        font-size: inherit;
-        color: $base-black;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 3em;
-        max-width: $articleMaxWidth;
-        li {
-            position: relative;
-            font-size: inherit;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background-color: rgb(0 0 0 / 3%);
-            padding: 3em 2em;
-            gap: 1.6em 0;
-            h3 {
-                font-size: FZ(28);
-            }
-            p {
-                font-size: FZ(17);
-                letter-spacing: 0.02em;
-                line-height: 1.8em;
-                display: flex;
-                flex-direction: column;
-                span {
-                    position: relative;
-                    padding-left: 0.8em;
-                    font-size: inherit;
-                    line-height: 1.6em;
-                    &::before {
-                        content: "";
-                        position: absolute;
-                        top: 0.6em;
-                        left: 0;
-                        width: 6px;
-                        aspect-ratio: 1;
-                        background-color: $base-black;
-                        border-radius: 50%;
-                    }
-                    i {
-                        color: #f00;
-                    }
-                }
-            }
-        }
-    }
-}
-
-/* =================================
  * 鑑定のみ希望の場合
  * ------------------------------ */
 .containerFortuneOnly {
@@ -79,6 +19,10 @@
     background-color: $base-white;
     gap: 3em 0;
     color: $base-black;
+    @include sp {
+        padding: 10vw 4vw 6vw;
+        gap: 4vw 0;
+    }
     article {
         display: flex;
         flex-direction: column;
@@ -92,6 +36,9 @@
             gap: 1em 0;
             dt {
                 font-size: FZ(28);
+                @include sp {
+                    font-size: FZ(24);
+                }
             }
             dd {
                 font-size: FZ(17);

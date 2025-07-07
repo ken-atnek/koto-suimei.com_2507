@@ -7,6 +7,10 @@
     @include Serif;
     background-color: #fff;
     padding: 5em 0 0;
+    @include sp {
+        gap: 4vw 0;
+        padding: 8vw 0 0;
+    }
     article {
         display: grid;
         grid-template-columns: auto 1fr;
@@ -15,13 +19,21 @@
         max-width: $articleMaxWidth;
         gap: 3em 5em;
         padding: 3em 0;
+        @include sp {
+            display: flex;
+            flex-direction: column;
+            padding: 0 4vw 10vw;
+            align-items: center;
+        }
         .imageQr {
             position: relative;
             grid-row: span 2;
             max-width: 24rem;
+            @include sp {
+                display: none;
+            }
         }
         p {
-            color: $base-black;
             font-size: FZ(17);
             max-width: 33em;
             letter-spacing: 0.04em;
@@ -36,6 +48,7 @@
                 padding: 1rem 3rem;
                 border-radius: 100vmax;
                 letter-spacing: 0.04em;
+                color: $base-white;
             }
         }
     }
@@ -47,5 +60,6 @@
         background-color: $base-black;
         font-size: FZ(14);
         letter-spacing: 0.04em;
+        color: $base-white;
     }
 }

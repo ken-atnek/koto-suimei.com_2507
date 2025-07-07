@@ -3,9 +3,9 @@
  * URL:src/components/lesson-koto/ContainerAboutLesson.tsx
  * Referenced in: src/app/lesson-koto/page.tsx
  * Created: 2025-07-05
- * Last updated: 2025-07-05
+ * Last updated: 2025-07-07
  * ======================================= */
-import styles from '@/styles/PageLessonSuimei.module.scss';
+import styles from '@/styles/ContainerLesson.module.scss';
 import { useMemo } from 'react';
 const ContainerLessonAbout = () => {
   type LessonItem = {

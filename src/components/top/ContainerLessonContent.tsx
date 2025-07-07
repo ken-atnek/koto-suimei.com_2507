@@ -5,7 +5,7 @@
  * Created: 2025-07-05
  * Last updated: 2025-07-05
  * ======================================= */
-import styles from '@/styles/PageTop.module.scss';
+import styles from '@/styles/ContainerLesson.module.scss';
 import { useMemo } from 'react';
 const ContainerLessonContent = () => {
   type LessonItem = {
@@ -91,7 +91,7 @@ const ContainerLessonContent = () => {
   );
 
   return (
-    <section className={styles.containerLessonContent}>
+    <section className={styles.containerLessonAbout}>
       <h2>講座内容</h2>
       <ul className={styles.listLesson}>
         {lessonData.map((item, index) => (
