@@ -2,7 +2,7 @@
  * 徳永琴教室 FOOTER
  * URL: src/components/common/Footer.tsx
  * Created: 2025-07-05
- * Last updated: 2025-07-05
+ * Last updated: 2025-07-29
  * ======================================= */
 import styles from '@/styles/components/common/Footer.module.scss';
 import LineQr from '@/assets/images/ line-qr.webp';
@@ -20,7 +20,7 @@ const Footer = () => {
         <p>
           お問い合わせはラインより受け付けております。
           <br />
-          お手数です左記QRコードを読み込むか、下記ボタンをクリックして、友だち登録してお問合せください。
+          こちらのQRコードを読み込むか、下記ボタンをクリックして、友だち登録してお問合せください。
         </p>
         <div className={styles.wrapLine}>
           <ExternalLink

@@ -44,6 +44,23 @@
         }
     }
 }
+.mobileMenu {
+    display: none;
+    @include sp {
+        display: flex;
+        font-size: inherit;
+        gap: 2vw;
+        flex-wrap: wrap;
+        padding-inline: 4vw;
+        justify-content: center;
+        a {
+            font-size: FZ(16);
+            background-color: $base-black;
+            color: $base-white;
+            padding: 3vw 2vw;
+        }
+    }
+}
 
 /* =================================
  * HERO TEXT
@@ -337,9 +354,22 @@
             dd {
                 font-size: FZ(16);
                 letter-spacing: 0.04em;
+                display: flex;
+                flex-direction: column;
+                gap: 0.5em 0;
                 p {
                     font-size: inherit;
                     margin-top: 0.5em;
+                }
+                div {
+                    font-size: inherit;
+                    h3 {
+                        font-weight: 600;
+                        font-size: 1em;
+                    }
+                    address {
+                        font-size: 0.9em;
+                    }
                 }
             }
             &:first-of-type {

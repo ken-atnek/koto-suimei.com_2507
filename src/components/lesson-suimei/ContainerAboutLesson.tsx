@@ -3,7 +3,7 @@
  * URL:src/components/lesson-suimei/ContainerAboutLesson.tsx
  * Referenced in:  src/app/lesson-suimei/page.tsx
  * Created: 2025-07-05
- * Last updated: 2025-07-07
+ * Last updated: 2025-07-29
  * ======================================= */
 import styles from '@/styles/ContainerLesson.module.scss';
 import { useMemo } from 'react';
@@ -31,7 +31,7 @@ const ContainerLessonAbout = () => {
             <span>より生きやすくなる「易学」を学びましょう</span>
             <span>
               希望者は資格取得まで指導いたします
-              <i>（2024年度教部合格者 7名）</i>
+              <i>（2025年現在 教部合格者 7名 教範合格者 5名）</i>
             </span>
             持参物：テキスト、筆記用具
           </>
@@ -45,14 +45,32 @@ const ContainerLessonAbout = () => {
             <br /> ラインまたはお電話よりご予約ください。
             <br />
             <br />
+            【神水教室】
+            <br />
             授業可能曜日
             <br />
             9:00〜20:00（月〜日曜日）
             <br />
+            授業時間 60分〜
             <br />
-            授業時間
             <br />
-            60分
+            【宮日カルチャーセンター】
+            <br />
+            （0985-23-7778）
+            <br />
+            授業曜日
+            <br />
+            10:00〜11:30（第三月曜日）
+            <br />
+            授業時間 90分〜
+            <br />
+            <br />
+            【桜ヶ丘教室】
+            <br />
+            不定期開催
+            <br />
+            授業時間 90分〜
+            <br />
             <br />
             ※授業時間は多少前後することがあります。
           </>

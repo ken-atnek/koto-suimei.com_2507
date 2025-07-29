@@ -2,11 +2,12 @@
  *  徳永琴教室 TOPページ
  * URL: /app/page.tsx
  * Created: 2025-07-05
- * Last updated: 2025-07-05
+ * Last updated: 2025-07-29
  * ======================================= */
 
 import type { Metadata } from 'next';
 import styles from '@/styles/PageTop.module.scss';
+import Link from 'next/link';
 import Image from 'next/image';
 import ImagePet01 from '@/assets/images/top/pet01.webp';
 import ImagePet02 from '@/assets/images/top/pet02.webp';
@@ -16,8 +17,7 @@ import ImageCourseInfo from '@/assets/images/top/course-info.webp';
 import ContainerLessonContent from '@/components/top/ContainerLessonContent';
 export const generateMetadata = (): Metadata => {
   return {
-    title:
-      '熊本市で琴・四柱推命・銭太鼓を学ぶ（琴教室・太鼓教室・四柱推命教室）',
+    title: '徳永教室|熊本市の琴教室',
     description:
       '徳永教室は、熊本市内にある箏（琴）・四柱推命を学べる教室です。レッスン時間は月〜日曜、9:00-20:00から選べるのでご都合のつく時に受講することができます。全くの未経験の方から上級者の方まで幅広く募集しています。',
   };
@@ -58,6 +58,13 @@ export default function Home() {
           </div>
         </article>
       </section>
+      <nav className={styles.mobileMenu}>
+        <Link href="/lesson-suimei/">四柱推命講座・鑑定</Link>
+        <Link href="/lesson-koto/">箏講座</Link>
+        <Link href="/lesson-zenidaiko/">銭太鼓体操講座</Link>
+        <Link href="/lesson-taishokoto/">大正琴講座</Link>
+        <Link href="/lesson-minikoto/">ミニ箏講座</Link>
+      </nav>
       <ContainerLessonContent />
       <section className={styles.containerPet}>
         <h2>ペットの同伴について</h2>
@@ -120,7 +127,28 @@ export default function Home() {
         <article>
           <dl>
             <dt>教室</dt>
-            <dd>熊本県熊本市神水1-15-8</dd>
+            <dd>
+              <div>
+                <h3>神水教室</h3>
+                <address>熊本県熊本市神水1-15-8</address>
+              </div>
+              <div>
+                <h3>水前寺教室</h3>
+                <address>熊本県熊本市中央区水前寺3-25-2</address>
+              </div>
+              <div>
+                <h3>宮日カルチャーセンター</h3>
+                <address>宮崎市橘通4丁目6−3</address>
+              </div>
+              <div>
+                <h3>桜ヶ丘教室</h3>
+                <address>宮崎市桜ヶ丘3丁目18−1</address>
+              </div>
+              <div>
+                <h3>白川カルチャー</h3>
+                <address>熊本市中央区草葉町5−1（熊本市中央公民館）</address>
+              </div>
+            </dd>
           </dl>
           <dl>
             <dt>講座曜日</dt>
@@ -131,7 +159,7 @@ export default function Home() {
             <dd>
               講座についてのお問い合わせはLINEより承っております。
               <p>
-                ※銭太鼓教室を受講されたい場合のみ、熊本中央公民館にお問い合わせください。
+                ※銭太鼓教室を受講されたい場合のみ、熊本市中央公民館（096-353-0151）にお問い合わせください。
               </p>
             </dd>
           </dl>

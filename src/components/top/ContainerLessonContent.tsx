@@ -3,7 +3,7 @@
  * URL:src/components/top/ContainerLessonContent.tsx
  * Referenced in:  /app/page.tsx
  * Created: 2025-07-05
- * Last updated: 2025-07-05
+ * Last updated: 2025-07-29
  * ======================================= */
 import styles from '@/styles/ContainerLesson.module.scss';
 import { useMemo } from 'react';
@@ -82,7 +82,7 @@ const ContainerLessonContent = () => {
             <br />
             ※銭太鼓教室は、
             <br />
-            中央公民館カルチャー講座（096-353-0151）よりお問い合わせください。
+            白川カルチャー講座（096-353-0151）よりお問い合わせください。
           </>
         ),
       },

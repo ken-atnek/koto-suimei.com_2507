@@ -2,7 +2,7 @@
  *  四柱推命講座・鑑定 ページ
  * URL: src/app/lesson-suimei/page.tsx
  * Created: 2025-07-05
- * Last updated: 2025-07-05
+ * Last updated: 2025-07-29
  * ======================================= */
 
 import PageHead from '@/components/common/PageHead';
@@ -13,9 +13,9 @@ import styles from '@/styles/PageLessonSuimei.module.scss';
 
 export const generateMetadata = (): Metadata => {
   return {
-    title: '四柱推命講座・鑑定｜徳永教室',
+    title: '徳永教室｜熊本市で学ぶ四柱推命・易学｜初心者歓迎・鑑定も受付中',
     description:
-      '徳永教室は、熊本市内にある箏（琴）・四柱推命を学べる教室です。レッスン時間は月〜日曜、9:00-20:00から選べるのでご都合のつく時に受講することができます。全くの未経験の方から上級者の方まで幅広く募集しています。',
+      '熊本市の徳永教室では、初心者から学べる四柱推命講座や本格的な個人鑑定を行っています。あなたの運命や特性を知り、より良い人生のヒントを得てみませんか？琴・銭太鼓の指導も行っています。',
   };
 };
 export default function LessonSuimei() {

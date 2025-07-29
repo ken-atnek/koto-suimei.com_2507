@@ -2,7 +2,7 @@
  *  ミニ箏講座 ページ
  * URL: src/app/lesson-taishokoto/page.tsx
  * Created: 2025-07-05
- * Last updated: 2025-07-05
+ * Last updated: 2025-07-29
  * ======================================= */
 
 import PageHead from '@/components/common/PageHead';
@@ -13,9 +13,9 @@ import styles from '@/styles/PageLessonKoto.module.scss';
 
 export const generateMetadata = (): Metadata => {
   return {
-    title: 'ミニ箏講座｜徳永教室',
+    title: '徳永教室｜熊本市のミニ箏講座｜持ち運べる和楽器で気軽に楽しむ',
     description:
-      '徳永教室は、熊本市内にある箏（琴）・四柱推命を学べる教室です。レッスン時間は月〜日曜、9:00-20:00から選べるのでご都合のつく時に受講することができます。全くの未経験の方から上級者の方まで幅広く募集しています。',
+      '熊本市の徳永教室では、気軽に始められるミニ箏講座を開講中。小型で持ち運びしやすい楽器ながら、本格的な音色を楽しめます。初心者や高齢の方にもやさしく、和の音楽を身近に感じられる講座です。',
   };
 };
 export default function LessonKoto() {

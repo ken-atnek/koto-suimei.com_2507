@@ -2,7 +2,7 @@
  *  箏講座 ページ
  * URL: src/app/lesson-koto/page.tsx
  * Created: 2025-07-05
- * Last updated: 2025-07-05
+ * Last updated: 2025-07-29
  * ======================================= */
 
 import PageHead from '@/components/common/PageHead';
@@ -13,9 +13,9 @@ import styles from '@/styles/PageLessonKoto.module.scss';
 
 export const generateMetadata = (): Metadata => {
   return {
-    title: '箏講座｜徳永教室',
+    title: '徳永教室｜熊本市で学ぶ箏（琴）講座｜初心者・シニア歓迎',
     description:
-      '徳永教室は、熊本市内にある箏（琴）・四柱推命を学べる教室です。レッスン時間は月〜日曜、9:00-20:00から選べるのでご都合のつく時に受講することができます。全くの未経験の方から上級者の方まで幅広く募集しています。',
+      '熊本市の徳永教室では、8歳から96歳まで幅広い年代の方が箏（琴）を楽しく学んでいます。初心者も安心して参加でき、楽器がない方も大丈夫。あなたのペースで、日本の伝統音楽を身近に。',
   };
 };
 export default function LessonKoto() {

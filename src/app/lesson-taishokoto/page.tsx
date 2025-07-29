@@ -2,7 +2,7 @@
  *  大正琴講座 ページ
  * URL: src/app/lesson-taishokoto/page.tsx
  * Created: 2025-07-05
- * Last updated: 2025-07-05
+ * Last updated: 2025-07-29
  * ======================================= */
 
 import PageHead from '@/components/common/PageHead';
@@ -13,9 +13,10 @@ import styles from '@/styles/PageLessonKoto.module.scss';
 
 export const generateMetadata = (): Metadata => {
   return {
-    title: '大正琴講座｜徳永教室',
+    title:
+      '徳永教室｜熊本市の大正琴講座｜初心者歓迎・楽しく学べる和楽器レッスン',
     description:
-      '徳永教室は、熊本市内にある箏（琴）・四柱推命を学べる教室です。レッスン時間は月〜日曜、9:00-20:00から選べるのでご都合のつく時に受講することができます。全くの未経験の方から上級者の方まで幅広く募集しています。',
+      '熊本市の徳永教室では、大正琴を楽しく学べる講座を開講中。初めての方でも数字譜を使って無理なく演奏を楽しめます。大人の趣味・生涯学習にもぴったりの和楽器レッスンです。',
   };
 };
 export default function LessonKoto() {

@@ -2,7 +2,7 @@
  *  銭太鼓講座 ページ
  * URL: src/app/lesson-zenidaiko/page.tsx
  * Created: 2025-07-05
- * Last updated: 2025-07-05
+ * Last updated: 2025-07-29
  * ======================================= */
 
 import PageHead from '@/components/common/PageHead';
@@ -15,9 +15,9 @@ import Image01 from '@/assets/images/lesson-zenidaiko/image01.webp';
 import Image from 'next/image';
 export const generateMetadata = (): Metadata => {
   return {
-    title: '銭太鼓講座｜徳永教室',
+    title: '徳永教室｜熊本市の銭太鼓体操講座｜楽しく健康づくり・初心者歓迎',
     description:
-      '徳永教室は、熊本市内にある箏（琴）・四柱推命を学べる教室です。レッスン時間は月〜日曜、9:00-20:00から選べるのでご都合のつく時に受講することができます。全くの未経験の方から上級者の方まで幅広く募集しています。',
+      '熊本市の徳永教室では、年齢を問わず誰でも楽しめる銭太鼓体操講座を開講中。音楽に合わせて体を動かすことで、楽しみながら健康を保てます。初心者も大歓迎！まずは体験から始めてみませんか？',
   };
 };
 export default function LessonZenidaiko() {
@@ -35,13 +35,13 @@ export default function LessonZenidaiko() {
         <h2>講座会場</h2>
         <span className={styles.sidebarH2}>～お申込み・お問い合わせ～</span>
         <article>
-          <h3>熊本市中央公民館カルチャー講座</h3>
-          <address>熊本市中央区草場町5番1号</address>
+          <h3>白川カルチャー講座</h3>
+          <address>熊本市中央区草場町5番1号(熊本市中央公民館)</address>
           <div>毎月第二日曜日14:00~15:00</div>
 
           <h4>お問い合わせ先</h4>
           <ExternalLink href="tel:0963530150" className={styles.itemTel}>
-            096-353-0150
+            096-353-0151
           </ExternalLink>
         </article>
       </section>

@@ -3,7 +3,7 @@
  * URL:src/components/lesson-zenidaiko/ContainerAboutLesson.tsx
  * Referenced in: src/app/lesson-zenidaiko/page.tsx
  * Created: 2025-07-05
- * Last updated: 2025-07-07
+ * Last updated: 2025-07-29
  * ======================================= */
 import styles from '@/styles/ContainerLesson.module.scss';
 import { useMemo } from 'react';
@@ -36,9 +36,9 @@ const ContainerLessonAbout = () => {
             レッスン料金
             <br />
             <br />
-            🔳中央公民館
-            <br />
-            7,920円/6回
+            7,920円/6回 <br />
+            <br /> 白川カルチャー <br />
+            （熊本市中央公民館）
           </>
         ),
       },

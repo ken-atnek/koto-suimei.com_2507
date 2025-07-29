@@ -24,20 +24,23 @@
             flex-direction: column;
             padding: 0 4vw 10vw;
             align-items: center;
+            gap: 6vw 0;
         }
         .imageQr {
             position: relative;
             grid-row: span 2;
             max-width: 24rem;
-            @include sp {
-                display: none;
-            }
         }
         p {
             font-size: FZ(17);
             max-width: 33em;
             letter-spacing: 0.04em;
             line-height: 1.8em;
+            @include sp {
+                order: -1;
+                max-width: unset;
+                margin-top: 4vw;
+            }
         }
         .wrapLine {
             font-size: inherit;

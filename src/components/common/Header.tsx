@@ -2,7 +2,7 @@
  * 徳永琴教室 HEADER
  * URL: src/components/common/Header.tsx
  * Created: 2025-07-05
- * Last updated: 2025-07-05
+ * Last updated: 2025-07-29
  * ======================================= */
 'use client';
 import styles from '@/styles/components/common/Header.module.scss';
@@ -82,7 +82,7 @@ const Header = () => {
         });
       }
     }
-  }, [pathname]);
+  }, [pathname, navLinks]);
 
   return (
     <header

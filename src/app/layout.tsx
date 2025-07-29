@@ -34,7 +34,7 @@ export const metadata: Metadata = {
       type: 'website',
       images: [
         {
-          url: '/ogp.webp',
+          url: '/ogp.png',
           width: 1200,
           height: 630,
           alt: '徳永教室 | 熊本市で琴・四柱推命・銭太鼓を学ぶ（琴教室・太鼓教室・四柱推命教室）のOGP画像',
@@ -50,19 +50,19 @@ export const metadata: Metadata = {
   robots: isRealProduction ? 'index, follow' : 'noindex, nofollow',
   icons: {
     icon: [
-      { url: 'favicon/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
-      { url: 'favicon/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
-      { url: 'favicon/favicon.ico', type: 'image/x-icon' },
+      // { url: '/favicon/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      // { url: '/favicon/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon/favicon.ico', type: 'image/x-icon' },
     ],
-    apple: [{ url: 'favicon/apple-touch-icon.png', sizes: '180x180' }],
-    other: [
-      {
-        rel: 'icon',
-        url: 'favicon/android-chrome-192x192.png',
-        sizes: '192x192',
-        type: 'image/png',
-      },
-    ],
+    apple: [{ url: '/favicon/apple-touch-icon.png', sizes: '180x180' }],
+    // other: [
+    //   {
+    //     rel: 'icon',
+    //     url: '/favicon/android-chrome-192x192.png',
+    //     sizes: '192x192',
+    //     type: 'image/png',
+    //   },
+    // ],
   },
 };
 
