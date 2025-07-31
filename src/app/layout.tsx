@@ -10,6 +10,7 @@ import '@/styles/globals.scss';
 import { Zen_Old_Mincho } from 'next/font/google';
 import Header from '@/components/common/Header';
 import Footer from '@/components/common/Footer';
+import Script from 'next/script';
 const zenOldMincho = Zen_Old_Mincho({
   subsets: ['latin'],
   weight: ['400', '500'],
@@ -86,6 +87,19 @@ export default function RootLayout({
           name="format-detection"
           content="telephone=no, address=no, email=no"
         />
+        {/* Google tag (gtag.js) */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-5B9JLVSZE3"
+          strategy="afterInteractive"
+        />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-5B9JLVSZE3');
+          `}
+        </Script>
       </head>
       <body>
         <Header />
